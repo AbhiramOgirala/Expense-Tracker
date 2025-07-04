@@ -39,7 +39,7 @@ def calculate_summary(df):
 def plot_summary(df):
     summary = df.groupby('Type')['Amount'].sum()
     fig, ax = plt.subplots()
-    ax.pie(summary, labels=summary.index, autopct='%1.1f%%', startangle=90, colors=['green', 'red'])
+    ax.pie(summary, labels=summary.index, autopct='%1.1f%%', startangle=90, colors=['red', 'green'])
     ax.axis('equal')
     return fig
 
